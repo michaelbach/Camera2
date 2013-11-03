@@ -8,7 +8,10 @@
 //	History
 //	=======
 //
+//	2013-11-03	added readout of image size, doesn't really work.
+//				added saving of still images
 //
+
 
 #import <Cocoa/Cocoa.h>
 #import <QTKit/QTkit.h>
@@ -16,14 +19,17 @@
 
 @interface Camera2: NSObject {
 	BOOL	isRunning;
+	BOOL	autoNumberStillImages;
+	NSString* stillImageFilePathName;
 }
 
 
 - (id)		initWithView: (QTCaptureView*) mCaptureView;
-
-- (void)	stopAndClose;
-	
+- (void)	takeStillImage;
+- (void)	stopAndClose;	
 @property (readonly) BOOL	isRunning;
+@property BOOL	autoNumberStillImages;
+@property (assign) NSString* stillImageFilePathName;
 
 
 @end

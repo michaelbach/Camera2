@@ -20,6 +20,7 @@
 //@property (assign) IBOutlet NSWindow *window;
 	IBOutlet NSWindow *window;
 	IBOutlet QTCaptureView	*mCaptureView;
+	IBOutlet NSTextField* stillImageFileName;
 	Camera2* camera;
 	BOOL _isMenuBarVisible, _isAutoHideOtherApplications;
 }
